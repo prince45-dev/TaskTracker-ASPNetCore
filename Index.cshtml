@@ -1,0 +1,9 @@
+<a href="/Tasks/Create">Add Task</a> | <a href="/Account/Logout">Logout</a>
+@foreach (var task in Model)
+{
+    <div>
+        <b>@task.Title</b> - @task.CreatedAt.ToShortDateString()
+        [<a href="/Tasks/Edit/@task.Id">Edit</a>]
+        [<a href="/Tasks/Delete/@task.Id">Delete</a>]
+    </div>
+}
